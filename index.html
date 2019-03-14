@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="descriotion" content="A gaming review website to suggest which games are the best">
+	<meta name="Keywords" content="#">
+	<meta name="author" content="Shashank Shekhar">
+	<title>GameArena | Your home to Gaming</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+</head>
+<body>
+<header>
+	<div class="container">
+		<div id="branding">
+			<h1 style="font-family:'Bangers';font-size: 50px; ">GameArena</h1>
+
+		</div>
+		<nav>
+			<ul>
+				<li class="current"><a href="index.html">Home</a></li>
+				<li><a href="Reviews.html">Reviews</a></li>
+				<li><a href="Ratings.html">Top Ratings</a></li>
+				<li><a href="About.html">About</a></li>
+				<li><a href="help.html">Help</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section id="showcase">
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="PUBG.jpg" style="width:100%;">
+  <div class="text" style="font-size: 40px;font-family: 'Acme', sans-serif;">Player Unknown's Battle Ground </div>
+</div>
+
+<div class="mySlides fade">
+  <img src="fifa-19.jpg" style="width:100%">
+  <div class="text" style="font-size: 40px;font-family: 'Acme', sans-serif;">FIFA 19: The best football game</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Fortnite.jpg" style="width:100%">
+  <div class="text" style="font-size: 40px;font-family: 'Acme', sans-serif;">Fortnite: Battle Royale</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</section>
+
+<section id="Boxes">
+	<div class="container">
+		<div class="box">
+			<img src="Review_logo.jpg">
+			<h3>Game Reviews</h3>
+			<p>Get the latest game reviews, be it PC or Console games,you will find all the latest developments in gaming world here on GameArena, We have the best team to catch all the little details of a game with experienced players and gaming enthusiasts to give all the little details about the game which will help you to decide where to spend your money.</p>
+		</div>
+		<div class="box">
+			<img src="news.jpg">
+			<h3>Latest News</h3>
+			<p>Satisfy the gaming enthusiasts inside you with all the latest news and developments of the gaming world, Know which new games are coming out next and which games are there to look out for, be ready to boast about your gaming knowledge in front of your friends with us at GAmeArena providing you with every little news you need.</p>
+		</div>
+		<div class="box">
+			<img src="ratings.jpeg">
+			<h3>Ratings</h3>
+			<p>GameArena will provide you with latest list of our top 10 rated video games,in our ratings section you will find all the necessary details about the top 10 rated games, with deatils like which console the game supports,which genre the game belongs to and current price of the game to help you pick out the best game you want to play.</p>
+		</div>
+	</div>
+	
+</section>
+
+<section>
+	<div class="container" id="newsletter">
+		<h1>Subscribe to our Newsletter</h1>
+		<form action="form.php">
+		
+			<button type="submit" class="button_1" onclick="window.location.href='form.php'"><span>Subscribe</span></button>
+		</form>
+	</div>
+	
+</section>
+
+<footer>
+	<p>GameArena, Copyright &copy; 2018 Author : Shashank Shekhar</p>
+</footer>
+
+<script>
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>
